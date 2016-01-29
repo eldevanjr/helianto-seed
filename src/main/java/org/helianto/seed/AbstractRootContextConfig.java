@@ -78,6 +78,13 @@ public abstract class AbstractRootContextConfig extends AbstractContextConfig {
 	 */
 	@Bean
 	public DataSource dataSource() {
+		return internalDataSource();
+	}
+	
+	/**
+	 * Data source extension point.
+	 */
+	protected DataSource internalDataSource() {
 		try {
 			ComboPooledDataSource ds = new ComboPooledDataSource();
 			ds.setDriverClass(env.getProperty("helianto.jdbc.driverClassName", "org.hsqldb.jdbcDriver"));

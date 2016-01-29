@@ -201,7 +201,6 @@ public class PasswordRecoveryController extends AbstractCryptoController{
 			model.addAttribute("recoverFail", "true");
 			
 		} catch (Exception e) {
-			e.printStackTrace();
 			model.addAttribute("recoverFailMsg", e.getMessage());
 			model.addAttribute("recoverFail", "true");
 			

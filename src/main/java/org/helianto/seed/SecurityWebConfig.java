@@ -17,6 +17,7 @@ package org.helianto.seed;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -50,7 +51,6 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import org.springframework.web.filter.OncePerRequestFilter;
-import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 
 /**
@@ -76,7 +76,7 @@ public class SecurityWebConfig
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
-	@Autowired
+	@Inject
 	private AuthenticationFailureHandler authenticationFailureHandler;
 	
 	@Autowired

@@ -1,12 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.helianto</groupId>
-		<artifactId>helianto</artifactId>
-		<version>0.5.2-SNAPSHOT</version>
-	</parent>
+	<groupId>org.helianto</groupId>
 	<artifactId>helianto-seed</artifactId>
+	<version>0.6.1-SNAPSHOT</version>
+	
 	
 	<name>Helianto Seed module</name>
 	
@@ -34,6 +32,7 @@
 		<maven.test.failure.ignore>false</maven.test.failure.ignore>
 		<spring-social.version>1.1.2.RELEASE</spring-social.version>
 		<spring-social-facebook.version>2.0.1.RELEASE</spring-social-facebook.version>
+		<helianto.version>0.6.0-SNAPSHOT</helianto.version>
 	</properties>
 	
 	<dependencies>
@@ -43,24 +42,24 @@
 		<dependency>
 			<groupId>org.helianto</groupId>
 			<artifactId>helianto-partner</artifactId>
-			<version>${project.version}</version>
+			<version>${helianto.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.helianto</groupId>
 			<artifactId>helianto-document</artifactId>
-			<version>${project.version}</version>
+			<version>${helianto.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.helianto</groupId>
 			<artifactId>helianto-sendgrid</artifactId>
-			<version>${project.version}</version>
+			<version>${helianto.version}</version>
 		</dependency>
 		
    		<dependency>
    			<groupId>org.helianto</groupId>
    			<artifactId>helianto-security</artifactId>
-   			<version>${project.version}</version>
+   			<version>${helianto.version}</version>
    		</dependency>
    		
 		<!-- 
@@ -344,6 +343,13 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
 			<scope>compile</scope>
+		</dependency>
+		
+		 <dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.2</version>
+			<optional>true</optional>
 		</dependency>
 		
     </dependencies>
