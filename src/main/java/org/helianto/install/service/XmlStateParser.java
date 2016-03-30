@@ -49,6 +49,8 @@ public class XmlStateParser implements StateParser {
 			    if (event == XMLStreamConstants.START_ELEMENT && parser.getLocalName().equals("state")) {
 			    	String stateCode = parser.getAttributeValue("", "stateCode");
 			    	State state = new State(context, stateCode, parser.getAttributeValue("", "stateName"));
+			    	state.setContext(context);
+			    	state.setPriority('0');
 			    	state.setCountry(country);
 			    	stateList.add(state);
 			    	logger.debug("Added {} to state list.", state);
